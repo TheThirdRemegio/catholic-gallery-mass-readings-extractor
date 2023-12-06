@@ -1,0 +1,76 @@
+$def-border: 0.1rem solid #000;
+
+#rawData {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.month {
+  text-align: center;
+  background-color: yellow;
+}
+
+h1 {
+  font-size: 16px;
+  margin: 4px;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+
+  font-size: 14px;
+}
+
+/*
+Usually, I'd nest .row, .cell, and .cell-1 under .table,
+but I won't for now to avoid specificity issues with the
+print layout.
+*/
+
+.row {
+  border: $def-border;
+}
+
+.cell {
+  text-align: left;
+  padding: 0.1rem;
+}
+
+.cell-1 {
+  text-align: center;
+  border-bottom: $def-border;
+}
+
+#attribution {
+  width: 60%;
+  margin: auto;
+}
+
+@media print {
+  $def-border: 1px solid #000;
+
+  * {
+    color: #000;
+    background-color: transparent !important;
+    text-decoration: none;
+  }
+
+  .row {
+    border: none;
+  }
+
+  .cell-1 {
+    border-top: $def-border;
+    border-bottom: $def-border;
+  }
+
+  #attribution {
+    display: none;
+  }
+}

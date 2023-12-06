@@ -1,0 +1,58 @@
+#rawData {
+  display: none; }
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.month {
+  text-align: center;
+  background-color: yellow; }
+
+h1 {
+  font-size: 16px;
+  margin: 4px; }
+
+.table {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  font-size: 14px; }
+
+/*
+Usually, I'd nest .row, .cell, and .cell-1 under .table,
+but I won't for now to avoid specificity issues with the
+print layout.
+*/
+.row {
+  border: 0.1rem solid #000; }
+
+.cell {
+  text-align: left;
+  padding: 0.1rem; }
+
+.cell-1 {
+  text-align: center;
+  border-bottom: 0.1rem solid #000; }
+
+#attribution {
+  width: 60%;
+  margin: auto; }
+
+@media print {
+  * {
+    color: #000;
+    background-color: transparent !important;
+    text-decoration: none; }
+
+  .row {
+    border: none; }
+
+  .cell-1 {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000; }
+
+  #attribution {
+    display: none; } }
+
+/*# sourceMappingURL=output.css.map */
